@@ -4,5 +4,6 @@
     "source.fixAll.eslint": true
   },
   "editor.fontSize": 16,
-  "editor.wordWrap": "on"
+  "editor.wordWrap": "on",
+  "typescript.tsdk": "node_modules/typescript/lib"
 }
