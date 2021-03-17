@@ -15,7 +15,9 @@ export default function Place({ place }: PlacesTemplateProps) {
 }
 
 export async function getStaticPaths() {
-  const { places } = await client.request<GetPlacesQuery>(GET_PLACES)
+  const { places } = await client.request<GetPlacesQuery>(GET_PLACES, {
+    first: 3
+  })
 
   const paths = places.map(({ slug }) => ({
     params: { slug }
@@ -35,6 +37,7 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
   if (!place) return { notFound: true }
 
   return {
+    revalidate: 5,
     props: {
       place
     }
