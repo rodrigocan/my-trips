@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://my-trips.rodrigocan.com.br
+
+# Sitemaps
+Sitemap: https://my-trips.rodrigocan.com.br/sitemap.xml
